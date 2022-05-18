@@ -14,10 +14,9 @@ create or replace TABLE META_DATA (
 	is_active VARCHAR(1)
 	
 );
-insert into DEMO.public.META_DATA values
-('orders.csv', '\\t','SF_ORDERS','Y','N','Y'),
-('people.csv', ',','SF_PEOPLE','N','Y','Y'),
-('returns.csv', '`~^','SF_RETURNS','N','Y','Y');
+insert into DEMO.STG.META_DATA values ('orders.csv', '\\t','SF_ORDERS','N','Y','Y');
+insert into DEMO.STG.META_DATA values ('people.csv', ',','SF_PEOPLE','Y','Y','Y');
+insert into DEMO.STG.META_DATA values ('returns.csv', '`~^','SF_RETURNS','N','Y','Y');
 
 create or replace TABLE SF_ORDERS (
 	ROW_ID VARCHAR(16777216),
